@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_182223) do
+ActiveRecord::Schema.define(version: 2018_09_21_143247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,13 +31,22 @@ ActiveRecord::Schema.define(version: 2018_09_20_182223) do
     t.string "country"
     t.integer "length"
     t.string "date"
+    t.string "winner"
+    t.string "second"
+    t.string "third"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "rider_races", force: :cascade do |t|
-    t.integer "rider_id"
-    t.integer "race_id"
+  create_table "riders", force: :cascade do |t|
+    t.string "name"
+    t.string "team"
+    t.string "nationality"
+    t.integer "points"
+    t.integer "bike"
+    t.integer "podiums"
+    t.integer "pole"
+    t.integer "victories"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

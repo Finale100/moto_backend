@@ -1,2 +1,0 @@
-class RiderRace < ApplicationRecord
-end
