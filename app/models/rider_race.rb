@@ -1,0 +1,2 @@
+class RiderRace < ApplicationRecord
+end
