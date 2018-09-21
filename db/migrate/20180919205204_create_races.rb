@@ -6,6 +6,9 @@ class CreateRaces < ActiveRecord::Migration[5.2]
       t.string :country
       t.integer :length
       t.string :date
+      t.string :winner
+      t.string :second
+      t.string :third
       t.timestamps
     end
   end
