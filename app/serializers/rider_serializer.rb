@@ -1,6 +1,4 @@
 class RiderSerializer < ActiveModel::Serializer
-  attributes :id, :name, :team, :nationality, :points, :bike, :podiums, :pole, :victories
-  #
-  # has_many :comments
-  # has_many :events
+  attributes :id, :name, :team, :nationality, :points, :bike, :podiums, :pole, :victories, :img
+
 end

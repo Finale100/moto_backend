@@ -1,5 +1,6 @@
 class Rider < ApplicationRecord
 
+
   def self.get_riders
     response = RestClient.get("https://api.sportradar.us/motogp/trial/v2/us/sport_events/sr:stage:337639/summary.json?api_key=ar5hphc8fupd3ukfy5qq25h4")
     new_response = JSON.parse(response.body)
