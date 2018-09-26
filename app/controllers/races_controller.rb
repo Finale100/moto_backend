@@ -4,6 +4,7 @@ require 'json'
 
 class RacesController < ApplicationController
 
+  skip_before_action :authenticate
   def index
     @races = Race.all
     render json: @races

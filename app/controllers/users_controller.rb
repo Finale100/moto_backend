@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+
+
   def index
     render json: User.all
   end
@@ -7,10 +9,14 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.valid?
-      render json: { user: UserSerializer.new(@user) }, status: :created
+      render json: { user: UserSerializer.new(my_current_user) }, status: :created
     else
       render json: { error: 'failed to create user' }, status: :not_acceptable
     end
+  end
+
+  def show
+    render json: { username: my_current_user.username, name: my_current_user.name }
   end
 
   private

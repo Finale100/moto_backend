@@ -4,6 +4,8 @@ require 'json'
 
 class RidersController < ApplicationController
 
+  skip_before_action :authenticate
+
   def index
     @riders = Rider.all
     render json: @riders
