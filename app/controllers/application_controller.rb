@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
-  before_action :authenticate
+  before_action :authenticate, except: [:my_current_user]
 
   private
 

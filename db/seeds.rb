@@ -31,4 +31,5 @@ Rider.find_by(id: 25).update(img: "http://photos.motogp.com/2016/09/05/12-thomas
 Rider.find_by(id: 26).update(img: "https://cdn-1.motorsport.com/images/mgl/0RB8elA0/s8/motogp-presentation-aprillia-racing-gresini-racing-2016-stefan-bradl-gresini-racing-april.jpg")
 Rider.find_by(id: 27).update(img: "https://www.crash.net/sites/default/files/styles/article/public/image_importer/MotoGP/690977.jpg")
 Rider.find_by(id: 28).update(img: "http://www.motorcycle-usa.com/wp-content/uploads/2013/11/Sylvain-Guintoli.jpg")
-Rider.find_by(id: 29).update(img: "http://photos.worldsbk.com/2014/12/12/christophe-ponssonjpg_full.jpg")
+Rider.find_by(id: 29).update(img: "https://s3-eu-west-1.amazonaws.com/crash.net/styles/article/s3/hires/1645752.0008.jpg")
+Rider.find_by(id: 30).update(img: "https://damcdn.autosport.com/editorial/classic583/8bf32d6b19ec0e3561361ca3793d1829.jpg")
