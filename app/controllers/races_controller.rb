@@ -10,6 +10,11 @@ class RacesController < ApplicationController
     render json: @races
   end
 
+  def show
+    @race = Race.find(params[:id])
+    render json: @race
+  end
+
   def create
     render json: Race.create(race_params)
   end

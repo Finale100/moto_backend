@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_154042) do
+ActiveRecord::Schema.define(version: 2018_10_02_211854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "race_id"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -23,6 +32,8 @@ ActiveRecord::Schema.define(version: 2018_09_25_154042) do
     t.string "what_to_bring"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "creator"
+    t.boolean "active", default: true
   end
 
   create_table "races", force: :cascade do |t|
@@ -36,6 +47,10 @@ ActiveRecord::Schema.define(version: 2018_09_25_154042) do
     t.string "third"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img"
+    t.string "img2"
+    t.string "img3"
+    t.string "img4"
   end
 
   create_table "riders", force: :cascade do |t|

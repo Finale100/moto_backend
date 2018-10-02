@@ -28,7 +28,7 @@ before_action :find_user, only: [:update, :destroy]
   end
 
   def show
-    render json: {id: my_current_user.id, username: my_current_user.username, name: my_current_user.name, about: my_current_user.about, email: my_current_user.name, img: my_current_user.img, location: my_current_user.location, what_do_you_ride: my_current_user.what_do_you_ride, password: my_current_user.password}
+    render json: {id: my_current_user.id, username: my_current_user.username, name: my_current_user.name, about: my_current_user.about, email: my_current_user.name, img: my_current_user.img, location: my_current_user.location, what_do_you_ride: my_current_user.what_do_you_ride, password: my_current_user.password, event: my_current_user.events}
   end
 
   private
