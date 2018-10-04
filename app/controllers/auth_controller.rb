@@ -16,11 +16,12 @@ class AuthController < ApplicationController
           img: user.img,
           location: user.location,
           what_do_you_ride: user.what_do_you_ride,
-          id: user.id
+          id: user.id,
+          event: user.events
         }
       }, status: 200
      else
-       # render "Failed", status: 404
+       render "Failed", status: 404
      end
   end
 
